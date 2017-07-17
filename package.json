@@ -1,0 +1,23 @@
+{
+  "name": "gotapi",
+  "version": "1.0.0",
+  "description": "This is a game of thrones reference API. This will support viewing names, places and things in the GOT universe.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "got",
+    "game",
+    "of",
+    "thrones",
+    "jon",
+    "snow"
+  ],
+  "author": "VinayCR",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.3"
+  }
+}
