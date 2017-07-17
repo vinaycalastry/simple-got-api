@@ -9,3 +9,30 @@ module.exports.CREDS = {
     mongouser : "<<mongouser>>",
     mongopwd : "<<mongopwd>>"
  };
+ ****************************************************************************************************************************************
+ 
+ ****************************************************************************************************************************************
+ 
+ Working:
+ =======
+ NAME: fetch all, fetch one
+ 
+ WIP:
+ ====
+ NAME: add, delete, update
+ PLACE: fetch all, fetch one, add, delete, update
+ THING: fetch all, fetch one, add, delete, update
+ 
+ To use API:
+ ==========
+ Use a REST client like ARC or Postman.
+ 
+ Fetch All:
+ http://localhost:5000/getname
+ 
+ Fetch One:
+ ----------
+ http://localhost:5000/getname/Jon
+ 
+
+ 
