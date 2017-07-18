@@ -12,7 +12,11 @@ mongoose.connect(creds.CREDS.mongouri);
 var nameSchema = new mongoose.Schema({
     FullName: String,
     House: String,
+    Origin: String,
+    Culture: String,
+    Religion: Array,
     Kingdom: String,
+    Allegiance: Array,
     Titles: Array,
     Parents: Array,
     Siblings: Array,
