@@ -51,16 +51,16 @@ var heroes = [
     WikiPage: "http://gameofthrones.wikia.com/wiki/Arya_Stark"
     }];
 
-/*
+
 for (hero of heroes){
     var addHero = nameModel(hero).save(function(err, data){
     if (err) throw err;
 });
 console.log("Done");
 }
-*/
 
 
+/*
 
 nameModel.findOne({}).exec(function(err, data){
     if (err) throw err;
@@ -70,3 +70,4 @@ nameModel.findOne({}).exec(function(err, data){
 
 
 
+*/
