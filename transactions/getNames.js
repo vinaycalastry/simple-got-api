@@ -14,6 +14,7 @@ module.exports.fetchAll = function(order, limit){
                                             resolve(returnedData);
                                         })
                                         .catch(function(err){
+                                            console.log(err);
                                             reject(err);
                                         });
                                 }
@@ -34,6 +35,7 @@ module.exports.fetchOne = function(name){
                                             resolve(returnedData);
                                         })
                                         .catch(function(err){
+                                            console.log(err);
                                             reject(err);
                                         });
                                 }
