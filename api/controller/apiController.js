@@ -28,7 +28,7 @@ module.exports.getAllNames = function(req, res){
             order = -1;
         }        
         //Call Transaction - getNames -> FetchAll
-        var getNames = trGetNames.fetchAll(order, limit);
+        var getNames = trGetNames.fetchAll(order, limit, "House", req.query.House);
         getNames.then(function(data){
             res.json(data);
         }).catch(function(err){
@@ -39,7 +39,29 @@ module.exports.getAllNames = function(req, res){
 
 //getNamebyName
 module.exports.getNamebyName = function(req, res){
-    var getName = trGetNames.fetchAllBySearch('FullName', req.params.Name);
+    if(req.params.Name && req.query.House){
+        var param = "FullName";
+        var paramValue = req.params.Name;
+        var queryParam = "House";
+        var queryParamValue = req.query.House;
+    }
+    else if(!req.params.Name && req.query.House){
+        var param = "";
+        var paramValue = "";
+        var queryParam = "House";
+        var queryParamValue = req.query.House;
+    }
+    else if (req.params.Name && !req.query.House){
+        var param = "FullName";
+        var paramValue = req.params.Name;
+        var queryParam = "";
+        var queryParamValue = "";
+    }
+    else{
+        res.status(400).json({error:"Invalid Request"});
+    }
+    
+    var getName = trGetNames.fetchAllBySearch(param, paramValue, queryParam, queryParamValue);
     getName.then(function(data){
                 res.json(data);
             }).catch(function(err){

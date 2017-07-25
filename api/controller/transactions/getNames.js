@@ -2,9 +2,21 @@
 var nameModel = require('../../models/name');
 var formatFetchedData = require('../general/formatFetchedData');
 
-module.exports.fetchAll = function(order, limit){
+module.exports.fetchAll = function(order, limit, queryParameter, queryParameterValue){
+        
     return new Promise(function(resolve, reject){
-                nameModel.find({}).limit(limit).sort({ FullName: order}).exec(function(err, data){
+        var findQuery = {};
+        if (queryParameter === "House"){
+            findQuery.House = new RegExp(queryParameterValue, 'i');
+        }
+        else if (queryParameter === ""){
+            findQuery = {};
+        }
+        else {
+            reject("Invalid Query Parameter: "+ queryParameter);
+        }
+
+        nameModel.find(findQuery).limit(limit).sort({ FullName: order}).exec(function(err, data){
                                 if (err) {
                                     reject(err);                                   
                                 }
@@ -23,14 +35,18 @@ module.exports.fetchAll = function(order, limit){
 }
 
 //Fetch by Name or House
-module.exports.fetchAllBySearch = function(name, value){
+module.exports.fetchAllBySearch = function(name, value, queryParameter, queryParameterValue){
     return new Promise(function(resolve, reject){
         var findQuery = {};
-        if (name === "FullName"){
+        if (name === "FullName" && queryParameter === ""){
             findQuery.FullName = new RegExp(value, 'i');
         }
+        else if (name === "FullName" && queryParameter === "House"){
+            findQuery.FullName = new RegExp(value, 'i');
+            findQuery.House = new RegExp(queryParameterValue, 'i');
+        }      
         else {
-            reject("Invalid Request Parameter: "+name);
+            reject("Invalid Request Parameter: "+ name);
         }
         
             
@@ -52,7 +68,7 @@ module.exports.fetchAllBySearch = function(name, value){
     });
 }
 
-//Fetch using Mongo ID
+//Fetch One using ID
 module.exports.fetchById = function(value){
     return new Promise(function(resolve, reject){
         console.log(value);

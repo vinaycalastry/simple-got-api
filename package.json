@@ -17,6 +17,7 @@
   "author": "VinayCR",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.7.0",
     "express": "^4.15.3",
     "mongoose": "^4.11.3"
   }
