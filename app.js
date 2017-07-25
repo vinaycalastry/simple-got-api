@@ -1,8 +1,12 @@
 //Require dependencies
+
+//Load env variables
+var dotenv = require('dotenv').config();
+
 //Express for web framework
 var express = require('express');
 var routes = require('./api/routes/routes');
-var compression = require('compression')
+var compression = require('compression');
 
 
 //Initialize express

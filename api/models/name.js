@@ -1,12 +1,13 @@
 //Require imports: Mongoose for DB, Creds for mongoose
 var mongoose = require('mongoose');
-var creds = require('../../creds');
+
+var MONGO_URI = process.env.MONGO_URI;
 
 //Replace mongoose promise with Node
 mongoose.Promise = global.Promise;
 
 //Connect to MongoDB
-mongoose.connect(creds.CREDS.mongouri);
+mongoose.connect(MONGO_URI);
 
 //Create a Schema
 var nameSchema = new mongoose.Schema({

@@ -1,5 +1,6 @@
 //Import Transactions
 var trGetNames = require('./transactions/getNames');
+var API_QUERY_LIMIT = parseInt(process.env.API_QUERY_LIMIT);
 
 /* ROUTES */
 
@@ -18,7 +19,7 @@ module.exports.getAllNames = function(req, res){
         if(req.query.limit){
             limit = parseInt(req.query.limit);
         }else{
-            limit = 100;
+            limit = API_QUERY_LIMIT || 100;
         }
         //set order to Asc if not set, else use the request
         if(req.query.order === "asc" || !req.query.order){
