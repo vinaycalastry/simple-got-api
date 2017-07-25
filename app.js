@@ -1,7 +1,7 @@
 //Require dependencies
 //Express for web framework
 var express = require('express');
-var apiController = require('./controller/apiController');
+var routes = require('./api/routes/routes');
 
 //Initialize express
 var app = express();
@@ -13,4 +13,4 @@ app.listen(app.get('port'), function(){
 });
 
 //FireController
-apiController(app);
+routes(app);

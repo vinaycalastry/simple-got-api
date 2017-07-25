@@ -1,6 +1,6 @@
 //Require imports: Mongoose for DB, Creds for mongoose
 var mongoose = require('mongoose');
-var creds = require('../creds');
+var creds = require('../../creds');
 
 //Replace mongoose promise with Node
 mongoose.Promise = global.Promise;
@@ -28,9 +28,3 @@ var nameSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Name', nameSchema);
-
-
-
-
-
-
