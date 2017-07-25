@@ -22,11 +22,11 @@ https://peaceful-sea-89348.herokuapp.com/
 Routes:
 =======
 
-For All Names: /names
-For a ID: /names/id/596f445f12e6ca2904ce305d
-For a Name: /names/Jon
-For a House: /names/?House=Stark
-For a Name and House: /names/Jon?House=Stark
+For All Names: /names <br />
+For a ID: /names/id/596f445f12e6ca2904ce305d <br />
+For a Name: /names/Jon <br />
+For a House: /names/?House=Stark <br />
+For a Name and House: /names/Jon?House=Stark <br />
 
 Example URL:
 ============
