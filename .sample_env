@@ -1,0 +1,5 @@
+API_QUERY_LIMIT=<<querylimit>>
+PORT=<<port>>
+MONGO_URI=mongodb://<<username>>:<<password>>@<<hostname>>:<<port>>/<<dbname>>
+MONGO_USER=<<username>>
+MONGO_PWD=<<password>>
