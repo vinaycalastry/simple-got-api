@@ -71,7 +71,6 @@ module.exports.fetchAllBySearch = function(name, value, queryParameter, queryPar
 //Fetch One using ID
 module.exports.fetchById = function(value){
     return new Promise(function(resolve, reject){
-        console.log(value);
         nameModel.findById(value).exec(function(err, data){
             
                                 if (err) {
