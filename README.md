@@ -22,6 +22,8 @@ https://peaceful-sea-89348.herokuapp.com/
 Routes:
 =======
 
+Names:
+------
 For All Names: /names <br />
 For a ID: /names/id/596f445f12e6ca2904ce305d <br />
 For a Name: /names/Jon <br />
