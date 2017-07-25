@@ -6,12 +6,12 @@ Next, create a creds.js file in your project in the root folder.
 
 creds-sample.js has a sample file where you can add in your own db and other related entries
 
-You can use data from below:
+You can use data from below: <br />
 https://docs.google.com/spreadsheets/d/1NQhMc0qNt-7snzCHo_hE-pKC0nFqrgwM5lZHmOX5Cwo/edit?usp=sharing
 
- ****************************************************************************************************************************************
+*****************************************************************************************************************************************
  
- ****************************************************************************************************************************************
+
  
 Base URL:
 =========
@@ -30,21 +30,31 @@ For a Name: /names/Jon <br />
 For a House: /names/?House=Stark <br />
 For a Name and House: /names/Jon?House=Stark <br />
 
+Places:
+-------
+
+<br />
+
+Things:
+-------
+
+<br />
+
 Example URL:
 ============
 
 https://peaceful-sea-89348.herokuapp.com/names/id/596f445f12e6ca2904ce305d
 
 
- Working:
- =======
- NAME: Get all names, Get names by house, Get names by ID, Get names by FullName and House, Get names by FullName
+Working:
+=======
+NAME: Get all names, Get names by house, Get names by ID, Get names by FullName and House, Get names by FullName
  
- WIP:
- ====
+WIP:
+====
 
- PLACE
- THING
+PLACE <br />
+THING <br />
  
 
  
