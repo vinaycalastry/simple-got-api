@@ -2,9 +2,9 @@
 GoT API to get names, places and things from the Game of Thrones universe
 
 To get the code working, create a MongoDB db
-Next, create a creds.js file in your project in the root folder.
+Next, create a .env file in your project in the root folder.
 
-creds-sample.js has a sample file where you can add in your own db and other related entries
+A .sample_env file where you can add in your own db and other related entries
 
 You can use data from below: <br />
 https://docs.google.com/spreadsheets/d/1NQhMc0qNt-7snzCHo_hE-pKC0nFqrgwM5lZHmOX5Cwo/edit?usp=sharing
