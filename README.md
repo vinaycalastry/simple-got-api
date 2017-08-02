@@ -30,10 +30,13 @@ For a Name: /names/Jon <br />
 For a House: /names/?House=Stark <br />
 For a Name and House: /names/Jon?House=Stark <br />
 
-Places:
+Houses:
 -------
-
-<br />
+For All Houses: /houses <br />
+For a ID: /houses/id/5978af5612e6ca19a06d0b90 <br />
+For a House: /houses/Stark <br />
+For a Type of House: /houses/?Type=Major <br />
+For a House and Type: /houses/Stark?Type=Major <br />
 
 Things:
 -------
