@@ -20,15 +20,15 @@ module.exports.getAllHouses = function(req, res){
         }
         else{
             order = -1;
-        }        
+        }
         //Call Transaction - getHouses -> FetchAll
-        var getHouses = trGetHouses.fetchAll(order, limit);
+        var getHouses = trGetHouses.fetchAll(order, limit, "Type", req.query.Type);
         getHouses.then(function(data){
             res.json(data);
         }).catch(function(err){
             console.log(err);
             res.status(404).json({error:err});
-        });      
+        });
 }
 
 //getHousebyName

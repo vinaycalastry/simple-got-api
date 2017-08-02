@@ -2,10 +2,19 @@ var houseModel = require('../../models/house');
 var formatFetchedHouses = require('../general/formatFetchedHouses');
 
 //Fetch All Houses from Mongo
-module.exports.fetchAll = function(order, limit){
+module.exports.fetchAll = function(order, limit, queryParameter, queryParameterValue){
         
     return new Promise(function(resolve, reject){
         var findQuery = {};
+        if (queryParameter === "Type"){
+            findQuery.Type = new RegExp(queryParameterValue, 'i');
+        }
+        else if (queryParameter === ""){
+            findQuery = {};
+        }
+        else {
+            reject("Invalid Query Parameter: "+ queryParameter);
+        }
         
 
         houseModel.find(findQuery).limit(limit).sort({ House: order}).exec(function(err, data){

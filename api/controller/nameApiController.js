@@ -35,7 +35,7 @@ module.exports.getAllNames = function(req, res){
         }).catch(function(err){
             console.log(err);
             res.status(404).json({error:err});
-        });      
+        });
 }
 
 //getNamebyName
