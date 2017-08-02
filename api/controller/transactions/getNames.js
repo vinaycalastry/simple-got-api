@@ -81,7 +81,7 @@ module.exports.fetchById = function(value){
                                         list.push(data);
                                         formatFetchedData.formatNames(list)
                                         .then(function(returnedData){ 
-                                            resolve(returnedData);
+                                            resolve(returnedData[0]);
                                         })
                                         .catch(function(err){
                                             console.log(err);
