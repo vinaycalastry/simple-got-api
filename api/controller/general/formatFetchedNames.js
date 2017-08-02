@@ -36,7 +36,3 @@ module.exports.formatNames = function(names){
     });
 }
 
-//Format Fetched Places
-
-
-//Format Fetched Things

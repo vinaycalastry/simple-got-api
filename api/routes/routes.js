@@ -1,22 +1,38 @@
-var gotapiController = require('../controller/apiController.js');
+var gotNameApiController = require('../controller/nameApiController.js');
+var gotHouseApiController = require('../controller/houseApiController.js');
+
 
 module.exports = function(app){
     //The Welcome route
     app.route('/')
-    .get(gotapiController.root);
+    .get(gotNameApiController.root);
 
     /*Routes for Names*/
 
-    //Routes for all names
+    //Route for all names
     app.route('/names')
-    .get(gotapiController.getAllNames);
+    .get(gotNameApiController.getAllNames);
 
-    //Routes for names based on Name
+    //Route for names based on Name
     app.route('/names/:Name')
-    .get(gotapiController.getNamebyName);
+    .get(gotNameApiController.getNamebyName);
 
-    //Routes for names based on ID
+    //Route for names based on ID
     app.route('/names/id/:Id')
-    .get(gotapiController.getNamebyId);
+    .get(gotNameApiController.getNamebyId);
+
+    /*Routes for Houses*/
+
+    //Route for all houses
+    app.route('/houses')
+    .get(gotHouseApiController.getAllHouses);
+
+    //Route for House based on HouseName
+    app.route('/houses/:House')
+    .get(gotHouseApiController.getHousebyName);
+
+    //Route for names based on ID
+    app.route('/houses/id/:Id')
+    .get(gotHouseApiController.getHousebyId);
 
 }
